@@ -172,3 +172,9 @@ h2 {
 #contact a{
     color: inherit;
 }
+
+@media (max-width: 480px) {
+    body {
+      font-size: 24px;
+    }
+  }
