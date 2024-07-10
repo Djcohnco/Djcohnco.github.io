@@ -2,6 +2,7 @@ body {
     background-color: var(--color-bg);
     color: var(--color-fg);
     font-family: Kanit;
+    text-align: center;
 }
 
 [data-theme="light"] {
