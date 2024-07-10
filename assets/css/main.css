@@ -175,6 +175,19 @@ h2 {
 
 @media (max-width: 480px) {
     body {
-      font-size: 30px;
+      font-size: 28px;
+    }
+    .fa-moon {
+        font-size: 26px;
+    }
+    
+    .fa-sun {
+        font-size: 26px;
+    }
+    .checkbox:checked + .checkbox-label .ball {
+        transform: translateX(26px);
+    }
+    div{
+        border: 5px;
     }
   }
