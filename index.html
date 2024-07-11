@@ -2,7 +2,7 @@
 <html lang="en" data-theme="dark">
 
 <head>
-    <title>Dan Cohn</title>
+    <title>Dan Cohn - Portfolio</title>
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/main.css">
@@ -13,6 +13,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script type="text/javascript" src="js/script.js" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 
 <body>
@@ -22,11 +23,12 @@
                 <h1>Dan Cohn</h1>
                 <div id="theme-toggle">
                     <input type="checkbox" class="checkbox" id="checkbox">
-                    <label for="checkbox" class="checkbox-label">
+                    <div class="checkbox-label">
                         <i class="fas fa-moon"></i>
                         <i class="fas fa-sun"></i>
                         <span class="ball"></span>
-                    </label>
+                    </div>
+                    <label for="checkbox" hidden>Dark Mode Toggle</label>
                 </div>
             </div>
         </header>
@@ -66,7 +68,7 @@
                             resume challenge</a> as a way to hone some of my cloud/devops skills. This project has been
                         a lot of fun so far and I am looking forward to diving back into it very soon! You can check out
                         where I am with it <a href="https://dc-test-resume.s3.amazonaws.com/resume.html"
-                            target="_blank">Here</a>, but please note this is still a work in progress!</p>
+                            target="_blank">HERE on aws</a>, but please note this is still a work in progress!</p>
                 </div>
             </div>
         </section>
@@ -149,7 +151,7 @@
                 <a href="https://www.linkedin.com/in/dan-cohn" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a>
             </div>
             <div>
-                <a href="mailto:dan.cohn@djcohn.co"><i class="fas fa-envelope"></i> Email</a> 
+                <a id="email" href="mailto:dan.cohn@djcohn.co"><i class="fas fa-envelope"></i> dan.cohn@djcohn.co</a> 
             </div>
             <div>
                 <a href="https://www.github.com/djcohnco" target="_blank"><i class="fab fa-github"></i></i> Github</a> 

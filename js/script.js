@@ -10,23 +10,20 @@ function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark })
     return "light";
 }
 
-
 function updateThemeOnHtmlEl({ theme }) {
     document.querySelector("html").setAttribute("data-theme", theme);
 }
-
 
 const checkbox = document.getElementById("checkbox");
 const localStorageTheme = localStorage.getItem("theme");
 const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
 
-
 let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
 
 updateThemeOnHtmlEl({ theme: currentThemeSetting });
 
-
-checkbox.addEventListener("change", () => {
+document.querySelector('.checkbox-label').addEventListener('click', function() {
+    checkbox.checked = !checkbox.checked;
     const newTheme = checkbox.checked ? "dark" : "light";
 
     localStorage.setItem("theme", newTheme);
@@ -34,6 +31,5 @@ checkbox.addEventListener("change", () => {
 
     currentThemeSetting = newTheme;
 });
-
 
 checkbox.checked = currentThemeSetting === "dark";
