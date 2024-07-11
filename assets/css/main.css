@@ -41,9 +41,6 @@ header h1 {
     padding-left: 80px;
 }
 
-#theme-toggle {
-    margin-right: 10px;
-}
 
 .header-content {
     display: flex;
@@ -172,6 +169,13 @@ h2 {
 
 #contact a{
     color: inherit;
+    text-decoration-line: none;
+}
+
+div#contact.section-card{
+    width: fit-content;
+    display: inline-flex;
+    margin-top: 0;
 }
 
 @media (max-width: 480px) {
@@ -190,5 +194,8 @@ h2 {
     }
     .section-card {
         flex-direction: column;
+    }
+    #theme-toggle{
+        align-self: baseline;
     }
   }
