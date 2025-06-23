@@ -1,159 +1,90 @@
-body {
-    background-color: var(--color-bg);
-    color: var(--color-fg);
-    font-family: Kanit;
-    text-align: center;
+/* Base styling */
+:root {
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-heading: 'Playfair Display', serif;
 }
 
 [data-theme="light"] {
-    --color-bg: white;
-    --color-fg: #1a1625;
-    --color-tt-bg: #908d96;
-    --color-sk-bg: #e6e3ec;
-    --color-card-bg: #8b8b8b2c;
-    --color-toggle-bg: white;
+    --color-bg: #ffffff;
+    --color-fg: #1a1a1a;
+    --color-accent: #64748b;
+    --color-card-bg: #f1f3f5;
+    --color-toggle-bg: #e2e8f0;
 }
 
 [data-theme="dark"] {
-    --color-bg: #1a1625;
-    --color-fg: white;
-    --color-sk-bg: #382bf0;
-    --color-tt-bg: #908d96;
-    --color-card-bg: #2f2b3a;
-    --color-toggle-bg: white;
+    --color-bg: #1a1a1a;
+    --color-fg: #e4e4e4;
+    --color-accent: #7f96b2;
+    --color-card-bg: #242424;
+    --color-toggle-bg: #373737;
 }
 
-a{
-    color: inherit;
-}
-header {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    padding: 20px;
-}
-
-h1 {
-    text-align: center;
+body {
     margin: 0;
-    flex: 1; 
-    font-size: 70px;
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    line-height: 1.6;
 }
 
-header h1 {
-    padding-left: 80px;
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    margin: 0 0 0.5rem 0;
 }
 
-
-.header-content {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 20px;
+    padding: 1rem;
 }
 
-h2 {
-    text-decoration: underline;
-    text-decoration-color: var(--color-sk-bg);
-    text-align: center;
+header h1 {
+    font-size: 2rem;
 }
 
-#certs div {
-    padding: 5px;
-    background-color: var(--color-sk-bg);
-    color: var(--color-fg);
-    border-radius: 10px;
+section {
+    margin: 2rem auto;
+    width: min(90%, 800px);
 }
 
-#certs ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.section-card {
+    background-color: var(--color-card-bg);
+    border-radius: 8px;
+    padding: 1rem;
 }
 
-#certs h3 {
-    text-align: center;
-    text-decoration: underline;
-}
-
-#certs a {
-    color: inherit;
-    text-decoration-line: none;
-}
-
-
-.cred-skills .tooltip{
+#theme-toggle {
     position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-}
-
-.cred-skills .tooltip .tooltiptext{
-    visibility: hidden;
-    width: 220px;
-    background-color: #76737e;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%; 
-    left: 50%;
-    margin-left: -110px; 
-    opacity: 0; 
-    transition: opacity 0.3s;
-}
-
-.cred-skills .tooltip:hover .tooltiptext{
-    visibility: visible;
-    opacity: 1; 
-}
-
-.cred-skills h3 {
-    margin-top: 0px;
-}
-
-.cred-skills li {
-    text-align: center;
 }
 
 .checkbox {
-    opacity: 0;
     position: absolute;
-
+    opacity: 0;
 }
 
 .checkbox-label {
     width: 50px;
     height: 26px;
-    border-radius: 50px;
-    position: relative;
-    padding: 5px;
-    cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: solid 2px;
-}
-
-.fa-moon {
-    color: #f1c40f;
-}
-
-.fa-sun {
-    color: #f1c40f;
+    padding: 3px;
+    border-radius: 30px;
+    background-color: var(--color-toggle-bg);
+    cursor: pointer;
+    border: 1px solid var(--color-accent);
 }
 
 .checkbox-label .ball {
-    background-color: var(--color-sk-bg);
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    left: 2px;
-    top: 3px;
+    background-color: var(--color-accent);
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
     transition: transform 0.2s linear;
 }
 
@@ -161,45 +92,30 @@ h2 {
     transform: translateX(24px);
 }
 
-.section-card {
+.icon-moon, .icon-sun {
+    font-size: 14px;
+}
+
+#contact.section-card {
     display: flex;
-    gap: 20px;
-    border-radius:10px;
-    background-color: var(--color-card-bg);
-    padding: 5px;
-    margin: 20px;
+    gap: 1rem;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-#contact a{
+#contact a {
     color: inherit;
-    text-decoration-line: none;
-}
-
-div#contact.section-card{
-    width: fit-content;
-    display: inline-flex;
-    margin-top: 0;
+    text-decoration: none;
 }
 
 @media (max-width: 480px) {
-    body {
-      font-size: 28px;
-      width: 100%;
-    }
-    .fa-moon {
-        font-size: 26px;
-    }
-    .fa-sun {
-        font-size: 26px;
+    header h1 {
+        font-size: 1.5rem;
     }
     .checkbox:checked + .checkbox-label .ball {
-        transform: translateX(26px);
+        transform: translateX(22px);
     }
     .section-card {
-        flex-direction: column;
-    }
-    #theme-toggle{
-        align-self: baseline;
+        padding: 0.75rem;
     }
 }

@@ -1,47 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
-
 <head>
+    <meta charset="UTF-8">
     <title>Dan Cohn - Portfolio</title>
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
     <script type="text/javascript" src="js/script.js" defer></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
-
 <body>
+    <header class="header-content">
+        <h1>Dan Cohn</h1>
+        <div id="theme-toggle">
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label class="checkbox-label" for="checkbox">
+                <span class="icon-moon" aria-hidden="true">🌙</span>
+                <span class="icon-sun" aria-hidden="true">☀</span>
+                <span class="ball"></span>
+            </label>
+        </div>
+    </header>
     <main>
-        <header>
-            <div class="header-content">
-                <h1>Dan Cohn</h1>
-                <div id="theme-toggle">
-                    <input type="checkbox" class="checkbox" id="checkbox">
-                    <div class="checkbox-label">
-                        <i class="fas fa-moon"></i>
-                        <i class="fas fa-sun"></i>
-                        <span class="ball"></span>
-                    </div>
-                    <label for="checkbox" hidden>Dark Mode Toggle</label>
-                </div>
-            </div>
-        </header>
         <section id="about-me">
             <h2>About Me</h2>
             <div class="section-card">
-                <div>
+                <p>
                     Hi, I'm Dan—an information security professional with a passion for technology, automation, and solving complex problems. I'm currently a Senior Information Security Analyst in Technology Control Management at American Express, where I focus on identifying and managing technology risks within the company. While my role is centered around risk advisory and governance, I have a strong interest in the technical side of security—understanding how systems work, where they break, and how they can be made more resilient.
                     <br>
                     I'm also pursuing my Master of Science in Cybersecurity at Georgia Tech, where I'm expanding my expertise in risk management, system security, and emerging threats. Outside of work and school, I enjoy building and breaking things—whether it's automating processes, experimenting with new technologies, or tinkering in my homelab to test new security concepts.
                     <br>
                     I'm always looking for ways to bridge the gap between security, business, and technology. If you're working on something interesting in automation, security, or breaking things for fun (ethically, of course), let's connect.
-                </div>
+                </p>
             </div>
         </section>
         <section id="Projects">
@@ -49,16 +41,9 @@
             <div class="section-card">
                 <div id="current-project" class="cred-skills">
                     <h3>Current Project</h3>
-                    <p>Currently, I am working on completing the site you are currently visiting! I am spending time
-                        completing the full stack engineer path on <a href="https://www.codecademy.com">codecademy</a> and this
-                        site is a challenge project to pracitce some HTML/CSS/JS</p>
+                    <p>Currently, I am working on completing the site you are currently visiting! I am spending time completing the full stack engineer path on <a href="https://www.codecademy.com">codecademy</a> and this site is a challenge project to pracitce some HTML/CSS/JS</p>
                     <h3>Other things I'm working on</h3>
-                    <p>I have been working on and off on <a
-                            href="https://cloudresumechallenge.dev/docs/the-challenge/aws/" target="_blank">the cloud
-                            resume challenge</a> as a way to hone some of my cloud/devops skills. This project has been
-                        a lot of fun so far and I am looking forward to diving back into it very soon! You can check out
-                        where I am with it <a href="https://dc-test-resume.s3.amazonaws.com/resume.html"
-                            target="_blank">HERE on aws</a>, but please note this is still a work in progress!</p>
+                    <p>I have been working on and off on <a href="https://cloudresumechallenge.dev/docs/the-challenge/aws/" target="_blank">the cloud resume challenge</a> as a way to hone some of my cloud/devops skills. This project has been a lot of fun so far and I am looking forward to diving back into it very soon! You can check out where I am with it <a href="https://dc-test-resume.s3.amazonaws.com/resume.html" target="_blank">HERE on aws</a>, but please note this is still a work in progress!</p>
                 </div>
             </div>
         </section>
@@ -69,12 +54,8 @@
                     <h3>ISACA</h3>
                     <ul>
                         <li>
-                            <a href="https://www.credly.com/badges/81ca2ca3-c721-4ba4-a2e9-0b0a024456be/public_url"
-                                target="_blank" class="tooltip">
-                                CRISC
-                                <span class="tooltiptext">
-                                    Clicking this link will take you to Certmetrics to verify my CRISC credential
-                                </span>
+                            <a href="https://www.credly.com/badges/81ca2ca3-c721-4ba4-a2e9-0b0a024456be/public_url" target="_blank" class="tooltip">CRISC
+                                <span class="tooltiptext">Clicking this link will take you to Certmetrics to verify my CRISC credential</span>
                             </a>
                         </li>
                     </ul>
@@ -83,22 +64,12 @@
                     <h3>AWS</h3>
                     <ul>
                         <li>
-                            <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/6691cf5243fd4dbea7fe697ae5e2a732"
-                                target="_blank" class="tooltip">
-                                Solutions Architect-Associate
-                                <span class="tooltiptext">Clicking this link
-                                    will take you to Certmetrics to verify
-                                    my Solutions Architect-Associate
-                                    credential</span>
+                            <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/6691cf5243fd4dbea7fe697ae5e2a732" target="_blank" class="tooltip">Solutions Architect-Associate
+                                <span class="tooltiptext">Clicking this link will take you to Certmetrics to verify my Solutions Architect-Associate credential</span>
                             </a>
                         </li>
-                        <li><a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/LF09DV6C7BF119W7"
-                                target="_blank" class="tooltip">
-                                Certified Cloud Practitioner
-                                <span class="tooltiptext">Clicking this link
-                                    will take you to Certmetrics to verify
-                                    my Certified Cloud Practitioner
-                                    credential</span>
+                        <li><a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/LF09DV6C7BF119W7" target="_blank" class="tooltip">Certified Cloud Practitioner
+                                <span class="tooltiptext">Clicking this link will take you to Certmetrics to verify my Certified Cloud Practitioner credential</span>
                             </a>
                         </li>
                     </ul>
@@ -107,20 +78,12 @@
                     <h3>CompTia</h3>
                     <ul>
                         <li>
-                            <a href="https://www.credly.com/badges/b4005891-d4a1-4243-bd3a-6c6b52c99bc9/public_url"
-                                target="_blank" class="tooltip">
-                                Security+
-                                <span class="tooltiptext">Clicking this link
-                                    will take you to Credly to verify
-                                    my Security+ credential</span>
+                            <a href="https://www.credly.com/badges/b4005891-d4a1-4243-bd3a-6c6b52c99bc9/public_url" target="_blank" class="tooltip">Security+
+                                <span class="tooltiptext">Clicking this link will take you to Credly to verify my Security+ credential</span>
                             </a>
                         </li>
-                        <li><a href="https://www.credly.com/badges/60ea6334-f89f-4770-a771-92005211d1d2/public_url"
-                                target="_blank" class="tooltip">
-                                A+
-                                <span class="tooltiptext">Clicking this link
-                                    will take you to credly to verify
-                                    my A+ credential</span>
+                        <li><a href="https://www.credly.com/badges/60ea6334-f89f-4770-a771-92005211d1d2/public_url" target="_blank" class="tooltip">A+
+                                <span class="tooltiptext">Clicking this link will take you to credly to verify my A+ credential</span>
                             </a>
                         </li>
                     </ul>
@@ -128,40 +91,23 @@
                 <div id="acg" class="cred-skills">
                     <h3>A Cloud Guru</h3>
                     <ul>
-                        <li>
-                            - AWS Certified Solutions Architect - Associate (SAA-C03)
-                        </li>
-                        <li>
-                            - Introduction to OpenShift
-                        </li>
-                        <li>
-                            - Reliability Engineering Concepts
-                        </li>
-                        <li>
-                            - DevOps Essentials
-                        </li>
+                        <li>- AWS Certified Solutions Architect - Associate (SAA-C03)</li>
+                        <li>- Introduction to OpenShift</li>
+                        <li>- Reliability Engineering Concepts</li>
+                        <li>- DevOps Essentials</li>
                     </ul>
                 </div>
             </div>
-            <div id="skills">
-
-            </div>
+            <div id="skills"></div>
         </section>
     </main>
     <footer>
         <h2>Contact Me</h2>
         <div id="contact" class="section-card">
-            <div>
-                <a href="https://www.linkedin.com/in/dan-cohn" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a>
-            </div>
-            <div>
-                <a id="email" href="mailto:dan.cohn@djcohn.co"><i class="fas fa-envelope"></i> dan.cohn@djcohn.co</a> 
-            </div>
-            <div>
-                <a href="https://www.github.com/djcohnco" target="_blank"><i class="fab fa-github"></i></i> Github</a> 
-            </div>
+            <div><a href="https://www.linkedin.com/in/dan-cohn" target="_blank">Linkedin</a></div>
+            <div><a id="email" href="mailto:dan.cohn@djcohn.co">dan.cohn@djcohn.co</a></div>
+            <div><a href="https://www.github.com/djcohnco" target="_blank">Github</a></div>
         </div>
     </footer>
 </body>
-
 </html>
