@@ -2,12 +2,7 @@ function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark })
     if (localStorageTheme !== null) {
         return localStorageTheme;
     }
-
-    if (systemSettingDark.matches) {
-        return "dark";
-    }
-
-    return "light";
+    return systemSettingDark.matches ? "dark" : "light";
 }
 
 function updateThemeOnHtmlEl({ theme }) {
@@ -19,16 +14,13 @@ const localStorageTheme = localStorage.getItem("theme");
 const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
 
 let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
-
 updateThemeOnHtmlEl({ theme: currentThemeSetting });
 
-document.querySelector('.checkbox-label').addEventListener('click', function() {
+document.querySelector('.checkbox-label').addEventListener('click', function () {
     checkbox.checked = !checkbox.checked;
     const newTheme = checkbox.checked ? "dark" : "light";
-
     localStorage.setItem("theme", newTheme);
     updateThemeOnHtmlEl({ theme: newTheme });
-
     currentThemeSetting = newTheme;
 });
 
