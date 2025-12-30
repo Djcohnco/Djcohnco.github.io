@@ -1,0 +1,24 @@
+site_name: Internal Docs
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - CI/CD:
+      - Overview: ci-cd/overview.md
+      - GitHub Actions: ci-cd/github-actions.md
+      - Branching: ci-cd/branching.md
+      - Releases: ci-cd/releases.md
+  - Deploy:
+      - Environments: deploy/environments.md
+      - Docker: deploy/docker.md
+      - Terraform: deploy/terraform.md
+      - Rollback: deploy/rollback.md
+  - Runbooks:
+      - Incidents: runbooks/incidents.md
+      - Alerts: runbooks/alerts.md
+      - On-call: runbooks/oncall.md
+  - Standards:
+      - Naming: standards/naming.md
+      - Secrets: standards/secrets.md
+      - Logging: standards/logging.md
